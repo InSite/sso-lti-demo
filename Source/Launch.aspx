@@ -49,10 +49,6 @@
             height: 26px;
             padding-left: 5px;
         }
-        input[type="submit"] {
-            height: 32px;
-            padding: 5px;
-        }
 
         #keys {
             margin-top: 20px;
@@ -68,8 +64,6 @@
 
         .button {
             display: block;
-            width: 100px;
-            height: 22px;
             background: #444;
             padding: 10px;
             text-align: center;
@@ -94,9 +88,13 @@
             
                     <p>This form simulates a basic LTI Consumer.</p>
 
-                    <p>Click the Validate button to create and validate an LTI launch request for Single-Sign-On access to Shift iQ.</p>
+                    <p>Click the Validate button to create an LTI launch request for Single-Sign-On access to Shift iQ.</p>
             
-                    <table>
+                    <table class="parameters">
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Value</th>
+                        </tr>
                         <tr>
                             <td><label title="user_id">Learner Code:</label></td>
                             <td><asp:TextBox runat="server" ID="LtiLearnerCode" /></td>
@@ -130,9 +128,8 @@
                             <td><asp:TextBox runat="server" ID="LtiLaunchUrl" /></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td>
-                                <asp:Button runat="server" ID="LtiValidate" Text="Validate and Launch" />
+                            <td colspan="2">
+                                <asp:Button runat="server" ID="LtiValidate" Text="Validate" CssClass="button" Width="100%" />
                             </td>
                         </tr>
                     </table>
@@ -150,10 +147,10 @@
                     <div id="submitForm">
                         <table class="parameters">
                             <tr>
-                                <th>Name</th>
+                                <th>Parameter</th>
                                 <th>Value</th>
                             </tr>
-                            <asp:Repeater runat="server" ID="ParameterRepeater2">
+                            <asp:Repeater runat="server" ID="ParameterRepeater1">
                                 <ItemTemplate>
                                     <tr>
                                         <td><%# Eval("Key") %></td>
@@ -172,14 +169,14 @@
                                             $("#" + formId).submit();
                                         }
                                     </script>
-                                    <a class="btn btn-default" href="javascript: submitform()">Launch</a>
+                                    <a class="button" href="javascript: submitform()">Launch</a>
                                 </td>
                             </tr>
                         </table>
                     </div>
 
                     <div id="keys">
-                        <asp:Repeater runat="server" ID="ParameterRepeater3">
+                        <asp:Repeater runat="server" ID="ParameterRepeater2">
                             <ItemTemplate>
                                 <span><%# Eval("Key") %></span>
                             </ItemTemplate>

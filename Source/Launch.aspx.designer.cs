@@ -132,6 +132,15 @@ namespace LtiLaunchDemo
         protected global::System.Web.UI.WebControls.View LtiStep2;
 
         /// <summary>
+        /// ParameterRepeater1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater ParameterRepeater1;
+
+        /// <summary>
         /// ParameterRepeater2 control.
         /// </summary>
         /// <remarks>
@@ -139,14 +148,5 @@ namespace LtiLaunchDemo
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater ParameterRepeater2;
-
-        /// <summary>
-        /// ParameterRepeater3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater ParameterRepeater3;
     }
 }

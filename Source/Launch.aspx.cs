@@ -48,11 +48,11 @@ namespace LtiLaunchDemo
 
             var parameterItems = sortedParameters.Select(x => new { x.Key, x.Value });
 
+            ParameterRepeater1.DataSource = parameterItems;
+            ParameterRepeater1.DataBind();
+
             ParameterRepeater2.DataSource = parameterItems;
             ParameterRepeater2.DataBind();
-
-            ParameterRepeater3.DataSource = parameterItems;
-            ParameterRepeater3.DataBind();
 
             LtiProcess.ActiveViewIndex = 1;
         }
